@@ -28,3 +28,8 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+#CLAUDE
+CLAUDE.md
+GAKUKO_WORK_LOG.MD
+AGENTS.md
