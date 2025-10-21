@@ -4,51 +4,72 @@
         <ThemeToggle />
 
         <div class="hero-card">
-            <div class="avatar-container">
-                <img
-                    :src="randomAvatar"
-                    alt="Avatar"
-                    class="avatar"
-                />
+            <div class="hero-left">
+                <div class="avatar-container">
+                    <img
+                        :src="randomAvatar"
+                        alt="Avatar"
+                        class="avatar"
+                    />
+                </div>
+
+                <h1 class="hero-title">Gakusyun</h1>
+                <h2 class="hero-subtitle">我要成为计算机高手!</h2>
             </div>
 
-            <h1 class="hero-title">Gakusyun</h1>
-            <h2 class="hero-subtitle">我要成为计算机高手!</h2>
+            <div class="hero-right">
+                <p class="hero-description">
+                    <span style="font-weight: bold;">关于我</span><br />
+                    喜欢宅在家，大学牲、没工作。没考证，飞舞一个。
+                </p>
 
-            <p class="hero-description">
-                暂略
-            </p>
+                <div class="hero-links">
+                    <a
+                        href="https://blog.gxj62.cn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="hero-link"
+                    >
+                        博客
+                    </a>
 
-            <div class="hero-links">
-                <a
-                    href="https://blog.gxj62.cn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="hero-link"
-                >
-                    Gakusyun博客
-                </a>
+                    <a href="mailto:gxj@gxj62.cn" class="hero-link">
+                        E-mail
+                    </a>
 
-                <a href="mailto:gxj@gxj62.cn" class="hero-link">
-                    E-mail
-                </a>
+                    <a
+                        href="https://github.com/Gakusyun"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="hero-link"
+                    >
+                        GitHub
+                    </a>
+                     <a
+                        href="https://space.bilibili.com/412933307"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="hero-link"
+                    >
+                        BiliBili
+                    </a>
+                     <a
+                        href="https://github.com/Gakusyun/Resume-public"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="hero-link"
+                    >
+                        防伪简历项目
+                    </a>
+                </div>
 
-                <a
-                    href="https://github.com/Gakusyun"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="hero-link"
-                >
-                    GitHub
-                </a>
-            </div>
-
-            <div class="hero-tags">
-                <span class="hero-tag">LaTeX</span>
-                <span class="hero-tag">Typst</span>
-                <span class="hero-tag">Docker</span>
-                <span class="hero-tag">GNU/Linux</span>
-                <span class="hero-tag">Caddy</span>
+                <div class="hero-tags">
+                    <span class="hero-tag">LaTeX</span>
+                    <span class="hero-tag">Typst</span>
+                    <span class="hero-tag">Docker</span>
+                    <span class="hero-tag">GNU/Linux</span>
+                    <span class="hero-tag">Caddy</span>
+                </div>
             </div>
         </div>
         
