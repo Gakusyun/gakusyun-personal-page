@@ -1,35 +1,34 @@
-# Logs
-logs
-*.log
+# build output
+dist/
+
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
 
-node_modules
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
 .DS_Store
-dist
-dist-ssr
-coverage
-*.local
 
-/cypress/videos/
-/cypress/screenshots/
+.vercel
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+package-lock.json
+bun.lockb
+yarn.lock
 
-*.tsbuildinfo
+.vscode
 
-#CLAUDE
-CLAUDE.md
+# Ai
 GAKUKO_WORK_LOG.MD
-AGENTS.md
+CLAUDE.md
+.claude
