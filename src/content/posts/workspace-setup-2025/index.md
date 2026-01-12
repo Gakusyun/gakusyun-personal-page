@@ -194,6 +194,102 @@ git config --global user.email 'gxj@gxj62.cn'
 ```
 
 # WSL 设置
+```bash
+sudo apt install apt-transport-https ca-certificates
+```
+
+```bash
+REMOTE=https://mirrors.hust.edu.cn/git/ohmyzsh.git sh -c "$(curl -fsSL https://mirrors.hust.edu.cn/ohmyzsh.git/install.sh)"
+```
+
+
+安装一些软件
+
+```shell
+sudo apt-get install vim curl wget git zsh -y
+```
+
+可选安装：
+
+```shell
+sudo apt-get install neofetch -y
+```
+
+#### 安装 ohmyzsh
+
+```bash
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+#### omz 美化
+
+[知乎](https://zhuanlan.zhihu.com/p/441676276)
+
+```bash
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+```bash
+git clone --depth=1 https://gitcode.com/gh_mirrors/po/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone https://gitcode.com/gh_mirrors/zs/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://gitcode.com/gh_mirrors/zs/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+.zshrc 编辑：
+
+```bash
+ZSH_THEME="powerlevel10k/powerlevel10k"
+```
+
+```shell
+plugins=(
+     # other plugins...
+     git
+     zsh-autosuggestions
+     zsh-syntax-highlighting
+     z
+)
+```
+
+### WSL 工作环境安装
+
+#### C
+
+```bash
+sudo apt install gcc gdb g++ -y
+```
+
+#### java
+
+以 Microsoft 编译的 [OpenJdk](https://learn.microsoft.com/zh-cn/java/openjdk/download) 为例
+
+```bash
+wget https://aka.ms/download-jdk/microsoft-jdk-11.0.20.1-linux-x64.tar.gz
+sudo tar -zxvf microsoft-jdk-11.0.20.1-linux-x64.tar.gz -C /usr/local/
+```
+
+```shell
+vim ~/.zshrc
+```
+
+在 .zshrc 中添加：
+
+```bash
+export JAVA_HOME=/usr/local/jdk-11.0.20.1+1
+export PATH=$JAVA_HOME/bin:$PATH
+```
+
+```bash
+source ~/.zshrc
+```
+
+测试 java 安装是否成功
+
+```shell
+java -version
+```
 
 # 附录
 ## 常用链接
