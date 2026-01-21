@@ -1,0 +1,16 @@
+---
+const { url } = Astro.request;
+
+// Check if path starts with /posts/
+const isPostsPath = url.pathname.startsWith("/posts/");
+
+// Redirect based on path
+let redirectPath = "/";
+
+if (isPostsPath) {
+	redirectPath = "/posts/";
+}
+
+// Set 302 redirect
+return Astro.redirect(redirectPath, 302);
+---
