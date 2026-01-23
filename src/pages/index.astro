@@ -1,18 +1,33 @@
 ---
 import { getEntry, render } from "astro:content";
 import Markdown from "@components/misc/Markdown.astro";
+import { navBarConfig } from "../config";
+import { LinkPresets } from "../constants/link-presets";
 import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
 import MainGridLayout from "../layouts/MainGridLayout.astro";
-// import { siteConfig } from "../config";
+import type { NavBarLink } from "../types/config";
+import { LinkPreset } from "../types/config";
+import { url } from "../utils/url-utils";
 
 const indexPost = await getEntry("spec", "index");
 
 if (!indexPost) {
-    throw new Error("Index page content not found");
+	throw new Error("Index page content not found");
 }
 
 const { Content } = await render(indexPost);
+
+// Get all navigation links (same as navbar)
+const links: NavBarLink[] = navBarConfig.links.map(
+	(item: NavBarLink | LinkPreset): NavBarLink => {
+		if (typeof item === "number") {
+			const key = item as keyof typeof LinkPresets;
+			return LinkPresets[key];
+		}
+		return item;
+	},
+);
 ---
 
 <MainGridLayout title={i18n(I18nKey.home)} description={i18n(I18nKey.home)}>
@@ -23,6 +38,23 @@ const { Content } = await render(indexPost);
             <Markdown class="mt-2">
                 <Content />
             </Markdown>
+
+            <!-- Custom Navigation Buttons -->
+            <div class="flex flex-wrap gap-4 justify-center w-full max-w-2xl mt-8 mx-auto">
+                {
+                    links.map((link) => (
+                        <a
+                            href={link.external ? link.url : url(link.url)}
+                            target={link.external ? "_blank" : null}
+                            class="group relative px-8 py-4 font-bold text-lg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95 border-[2px] border-[var(--primary)] bg-transparent hover:bg-[var(--primary)] text-[var(--primary)] hover:text-white"
+                        >
+                            <span class="relative z-10 flex items-center gap-2">
+                                {link.name}
+                            </span>
+                        </a>
+                    ))
+                }
+            </div>
         </div>
     </div>
 </MainGridLayout>
