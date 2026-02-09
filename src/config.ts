@@ -74,7 +74,7 @@ export const profileConfig: ProfileConfig = {
 		{
 			name: "邮箱",
 			icon: "material-symbols:mail-rounded",
-			url: "mailto:gxj@gxj62.cn",
+			url: "mailto:i@gkux.cn",
 		},
 		{
 			name: "GitHub",

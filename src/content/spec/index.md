@@ -4,5 +4,5 @@
 
 飞舞也是不服输的飞舞，绝不会被打倒！
 
-邮箱：[gxj@gxj62.cn](mailto:gxj@gxj62.cn) 欢迎骚扰。
+邮箱：[i@gkux.cn](mailto:i@gkux.cn) 欢迎骚扰。
 

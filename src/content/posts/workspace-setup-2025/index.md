@@ -190,7 +190,7 @@ ssh-keygen -t ed25519 -C "这里随便填"
 ## Git
 ```shell
 git config --global user.name 'Gakusyun'
-git config --global user.email 'gxj@gxj62.cn'
+git config --global user.email 'i@gkux.cn'
 ```
 
 # WSL 设置
