@@ -57,8 +57,6 @@ export const navBarConfig: NavBarConfig = {
 // 个人资料配置
 export const profileConfig: ProfileConfig = {
 	avatar: [ // 头像数组，每次访问随机选择一张
-		"assets/images/ao.jpg",
-		"assets/images/aotomira.webp",
 		"assets/images/bujishibou.webp",
 	],
 	name: "Gakusyun", // 姓名
