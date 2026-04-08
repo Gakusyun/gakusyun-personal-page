@@ -99,7 +99,7 @@ export default defineConfig({
 				showCopyToClipboardButton: false,
 			}
 		}),
-		svelte(),
+        svelte(),
 		sitemap(),
 	],
 	markdown: {

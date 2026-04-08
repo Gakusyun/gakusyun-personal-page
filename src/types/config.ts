@@ -17,7 +17,7 @@ export type SiteConfig = {
 		| "id";
 
 	themeColor: {
-		defaultColor: string;
+		hue: number;
 		fixed: boolean;
 	};
 	banner: {
@@ -46,9 +46,8 @@ export type Favicon = {
 
 export enum LinkPreset {
 	Home = 0,
-	Blog = 1,
-	Archive = 2,
-	About = 3,
+	Archive = 1,
+	About = 2,
 }
 
 export type NavBarLink = {
@@ -62,7 +61,7 @@ export type NavBarConfig = {
 };
 
 export type ProfileConfig = {
-	avatar?: string | string[];
+	avatar?: string;
 	name: string;
 	bio?: string;
 	links: {

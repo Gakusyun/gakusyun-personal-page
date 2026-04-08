@@ -26,7 +26,9 @@ package-lock.json
 bun.lockb
 yarn.lock
 
-.vscode
+# ide
+.idea
+*.iml
 
 # Ai
 GAKUKO_WORK_LOG.MD
