@@ -7,11 +7,10 @@ category: "技术"
 draft: false
 lang: "cn"
 ---
-自用镜像，禁止别用。
+
 
 ```shell
-export UV_INSTALLER_GITHUB_BASE_URL="https://uvm.gxj62.cn/github.com"
-export UV_PYTHON_INSTALL_MIRROR="https://uvm.gxj62.cn/github.com/astral-sh/python-build-standalone/releases/download"
+export UV_PYTHON_INSTALL_MIRROR="https://mirrors.nju.edu.cn/github-release/astral-sh/python-build-standalone"
 export UV_DEFAULT_INDEX="https://mirrors.hust.edu.cn/pypi/web/simple"
 ```
 
