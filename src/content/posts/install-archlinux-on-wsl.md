@@ -169,5 +169,6 @@ makepkg -si
 
 至此，你已在 Windows 上成功搭建了一个轻量高效的 Arch Linux 开发环境 🎉
 
-
-
+# 本文 PDF
+[在 Windows 上用 WSL 安装 Arch Linux
+published: 2026-04-08](https://cdn.gkux.cn/install-archlinux-wsl.pdf)
